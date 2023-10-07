@@ -1,0 +1,100 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  background-color: #0b1416f9;
+  color: white;
+}
+
+.nav-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+}
+#robot {
+  background-color: #d93a00;
+  padding: 8px;
+  border-radius: 30px;
+}
+
+.nav-title h3 {
+  margin-left: 3px;
+}
+
+.nav-buttons {
+  display: flex;
+}
+
+.nav-search {
+  width: 40%;
+  position: relative;
+}
+
+#search-mag {
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  color: rgba(220, 220, 220, 0.693);
+}
+
+.nav-search input {
+  background-color: #1a282d;
+  width: 100%;
+  padding: 15px;
+  border-radius: 30px;
+  outline: none;
+  border: none;
+  color: white;
+  text-indent: 20px;
+}
+.nav-search input::placeholder {
+  color: rgba(220, 220, 220, 0.693);
+}
+.nav-buttons div {
+  margin-right: 5px;
+}
+
+.nav-buttons div:nth-child(1) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  padding: 5px 10px;
+  background-color: #1a282d;
+}
+.nav-buttons div:nth-child(1) button {
+  outline: none;
+  border: none;
+  color: white;
+  background-color: #1a282d;
+}
+
+#getap {
+  color: white;
+  margin-right: 5px;
+}
+
+.nav-buttons div:nth-child(2) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: #d93a00;
+}
+.nav-buttons div:nth-child(2) button {
+  font-size: 14px;
+  outline: none;
+  color: white;
+  border: none;
+  background-color: #d93a00;
+}
+
+.nav-buttons div:nth-child(3) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin-left: 3px;
+}
