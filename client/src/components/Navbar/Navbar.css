@@ -1,9 +1,11 @@
 nav {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 8px;
   background-color: #0b1416f9;
   color: white;
+  z-index: 9999;
 }
 
 .nav-title {

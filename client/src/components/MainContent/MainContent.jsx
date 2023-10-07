@@ -5,8 +5,12 @@ import {
   faChartBar,
   faAngleDown,
   faCircle,
-  faC,
+  faUpLong,
+  faDownLong,
+  faMessage,
+  faArrowUpFromBracket,
 } from "@fortawesome/free-solid-svg-icons";
+import catImage from "../../assets/images/cat.jpg";
 const MainContent = () => {
   return (
     <main>
@@ -37,8 +41,40 @@ const MainContent = () => {
             </div>
           </div>
           <div className="card-content">
-            <div className="card-left"></div>
-            <div className="card-right-img"></div>
+            <div className="card-left">
+              <div className="card-left-text">
+                <p>
+                  Could someone remove the lower halkf of her body sp ot ;ppls
+                  ;ole sje kist jas 2 frpmt ;egs? will tip $10 for my favorite,
+                  thnaks
+                </p>
+              </div>
+              <div className="card-left-btns">
+                <div>
+                  {" "}
+                  <FontAwesomeIcon className="card-btn-icon" icon={faUpLong} />
+                  <p>23</p>
+                  <FontAwesomeIcon
+                    className="card-btn-icon"
+                    icon={faDownLong}
+                  />
+                </div>
+                <div>
+                  <FontAwesomeIcon className="card-btn-icon" icon={faMessage} />
+                  <p>15</p>
+                </div>
+                <div>
+                  <FontAwesomeIcon
+                    className="card-btn-icon"
+                    icon={faArrowUpFromBracket}
+                  />
+                  <p>Share</p>
+                </div>
+              </div>
+            </div>
+            <div className="card-right-img">
+              <img src={catImage} alt="cat image" />
+            </div>
           </div>
         </div>
       </div>
