@@ -129,6 +129,9 @@ const Side = () => {
           </div>
         )}
       </div>
+      <div className="policy">
+        <p>Radditz, Inc. @ 2023. All rights reserved.</p>
+      </div>
     </div>
   );
 };

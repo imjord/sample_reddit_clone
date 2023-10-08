@@ -11,7 +11,9 @@ import {
   faArrowUpFromBracket,
 } from "@fortawesome/free-solid-svg-icons";
 import catImage from "../../assets/images/cat.jpg";
-const MainContent = () => {
+const MainContent = (props) => {
+  const { data } = props;
+
   return (
     <main>
       <div className="main-header">
@@ -26,57 +28,64 @@ const MainContent = () => {
         </div>
       </div>
       <div className="main-cards">
-        <div className="card">
-          <div className="card-header">
-            <div className="card-header-left">
-              <p>rz/PhotoshopRequest</p>
-            </div>
-            <div className="card-header-right">
-              <button>Join</button>
-              <div className="circle-div">
-                <FontAwesomeIcon className="circle" icon={faCircle} />
-                <FontAwesomeIcon className="circle" icon={faCircle} />
-                <FontAwesomeIcon className="circle" icon={faCircle} />
-              </div>
-            </div>
-          </div>
-          <div className="card-content">
-            <div className="card-left">
-              <div className="card-left-text">
-                <p>
-                  Could someone remove the lower halkf of her body sp ot ;ppls
-                  ;ole sje kist jas 2 frpmt ;egs? will tip $10 for my favorite,
-                  thnaks
-                </p>
-              </div>
-              <div className="card-left-btns">
-                <div>
-                  {" "}
-                  <FontAwesomeIcon className="card-btn-icon" icon={faUpLong} />
-                  <p>23</p>
-                  <FontAwesomeIcon
-                    className="card-btn-icon"
-                    icon={faDownLong}
-                  />
+        {data.map((cards) => {
+          return (
+            <div className="card">
+              <div className="card-header">
+                <div className="card-header-left">
+                  <p>rz/{cards.sub}</p>
+                  <span> {cards.post_date}</span>
                 </div>
-                <div>
-                  <FontAwesomeIcon className="card-btn-icon" icon={faMessage} />
-                  <p>15</p>
-                </div>
-                <div>
-                  <FontAwesomeIcon
-                    className="card-btn-icon"
-                    icon={faArrowUpFromBracket}
-                  />
-                  <p>Share</p>
+                <div className="card-header-right">
+                  <button>Join</button>
+                  <div className="circle-div">
+                    <FontAwesomeIcon className="circle" icon={faCircle} />
+                    <FontAwesomeIcon className="circle" icon={faCircle} />
+                    <FontAwesomeIcon className="circle" icon={faCircle} />
+                  </div>
                 </div>
               </div>
+              <div className="card-content">
+                <div className="card-left">
+                  <div className="card-left-text">
+                    <p>{cards.post_title}</p>
+                  </div>
+                  <div className="card-left-btns">
+                    <div>
+                      {" "}
+                      <FontAwesomeIcon
+                        className="card-btn-icon"
+                        icon={faUpLong}
+                      />
+                      <p>{cards.upvotes}</p>
+                      <FontAwesomeIcon
+                        className="card-btn-icon"
+                        icon={faDownLong}
+                      />
+                    </div>
+                    <div>
+                      <FontAwesomeIcon
+                        className="card-btn-icon"
+                        icon={faMessage}
+                      />
+                      <p>{cards.comments}</p>
+                    </div>
+                    <div>
+                      <FontAwesomeIcon
+                        className="card-btn-icon"
+                        icon={faArrowUpFromBracket}
+                      />
+                      <p>Share</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="card-right-img">
+                  <img src={`${cards.images}`} alt="cat image" />
+                </div>
+              </div>
             </div>
-            <div className="card-right-img">
-              <img src={catImage} alt="cat image" />
-            </div>
-          </div>
-        </div>
+          );
+        })}
       </div>
     </main>
   );

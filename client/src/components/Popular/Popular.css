@@ -1,0 +1,43 @@
+.popular {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  color: gray;
+  width: 30%;
+  height: 100%;
+  border-top: 2px solid rgba(128, 128, 128, 0.1);
+  background-color: #0b1416f9;
+}
+
+.popular-container {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  background-color: black;
+  width: 60%;
+  height: 45%;
+  border-radius: 10px;
+  margin-top: 45px;
+}
+
+.popular-header {
+  padding: 15px;
+}
+
+.popular-list {
+  display: flex;
+  padding: 15px;
+  width: 100%;
+}
+
+.popular-list ul {
+  list-style: none;
+  width: 100%;
+}
+
+.popular-list ul li {
+  background-color: rgb(44, 44, 44);
+  margin-top: 2px;
+  padding: 10px;
+  width: 80%;
+}
