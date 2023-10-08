@@ -33,8 +33,11 @@ const MainContent = (props) => {
             <div className="card">
               <div className="card-header">
                 <div className="card-header-left">
-                  <p>rz/{cards.sub}</p>
-                  <span> {cards.post_date}</span>
+                  <img className="sub-avatar" src={`${cards.sub_avatar}`} />
+                  <p className="sub-name">rz/{cards.sub}</p>
+                  <FontAwesomeIcon className="date-circle" icon={faCircle} />
+                  <span className="card-date"> {cards.post_date}</span>
+                  <FontAwesomeIcon className="date-circle" icon={faCircle} />
                 </div>
                 <div className="card-header-right">
                   <button>Join</button>
@@ -55,11 +58,13 @@ const MainContent = (props) => {
                       {" "}
                       <FontAwesomeIcon
                         className="card-btn-icon"
+                        id="upvote"
                         icon={faUpLong}
                       />
                       <p>{cards.upvotes}</p>
                       <FontAwesomeIcon
                         className="card-btn-icon"
+                        id="downvote"
                         icon={faDownLong}
                       />
                     </div>

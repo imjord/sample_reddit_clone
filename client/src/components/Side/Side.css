@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   width: 25%;
-  height: 100%;
+  height: 98vh;
   border-top: 2px solid rgba(128, 128, 128, 0.1);
   border-right: 2px solid rgba(128, 128, 128, 0.1);
   background-color: #0b1416f9;
@@ -158,7 +158,7 @@
   justify-content: flex-end;
   width: 100%;
   align-items: flex-end;
-  height: 74%;
+  border: 2px solid red;
   font-size: 14px;
   color: gray;
 }

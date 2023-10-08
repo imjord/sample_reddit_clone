@@ -10,7 +10,7 @@ const Home = (props) => {
     <div className="home">
       <Side />
       <MainContent data={data} />
-      <Popular />
+      <Popular data={data} />
     </div>
   );
 };
