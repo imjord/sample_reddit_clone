@@ -26,7 +26,10 @@ const MainContent = (props) => {
     setView(!view);
   };
 
-  const classicViewLayout = () => {};
+  const classicViewLayout = () => {
+    setCardView(false);
+    setClassicView(true);
+  };
 
   const cardViewLayout = () => {
     setClassicView(false);
@@ -48,12 +51,16 @@ const MainContent = (props) => {
               {view ? (
                 <span className="list-view">
                   <p>View</p>
-                  <p className="card-view">
+                  <p
+                    onClick={cardViewLayout}
+                    className={cardView ? "card-view-true" : "card-view-tiny"}
+                  >
                     {" "}
                     <FontAwesomeIcon icon={faRug} className="view-icon" />
                     Card
                   </p>
                   <p
+                    onClick={classicViewLayout}
                     className={
                       classicView ? "classic-view-true" : "classic-view"
                     }
