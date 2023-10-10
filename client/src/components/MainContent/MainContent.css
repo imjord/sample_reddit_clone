@@ -55,6 +55,89 @@ main {
   border-radius: 20px;
 }
 
+/* tooltip
+ */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -60px;
+  margin-top: 10px;
+  z-index: 1;
+}
+.list-view {
+  position: absolute;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  top: 100%;
+  left: 50%;
+  width: 100px;
+  margin-left: -65px;
+  margin-top: 15px;
+  z-index: 5;
+  background-color: #0f1a1c;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.list-view p {
+  display: flex;
+  width: 100%;
+  padding: 5px;
+  color: white;
+}
+
+.view-icon {
+  display: flex;
+  margin-right: 5px;
+}
+.card-view {
+  padding-left: 9px;
+  color: #000;
+}
+.card-view:hover {
+  cursor: pointer;
+  background-color: #cbcdce5e;
+}
+
+.classic-view-true {
+  padding-left: 9px;
+  background-color: #cbcdce5e;
+}
+.classic-view {
+  padding-left: 9px;
+}
+.classic-view:hover {
+  cursor: pointer;
+  background-color: #cbcdce5e;
+}
+.tooltiptext {
+  font-size: 14px;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
 .main-header-icons:hover {
   cursor: pointer;
   background-color: rgba(128, 128, 128, 0.223);

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./MainContent.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -9,10 +9,31 @@ import {
   faDownLong,
   faMessage,
   faArrowUpFromBracket,
+  faList,
+  faRug,
 } from "@fortawesome/free-solid-svg-icons";
 import catImage from "../../assets/images/cat.jpg";
+import ClassicView from "../ClassicView/ClassicView";
+import CardView from "../CardView/CardView";
 const MainContent = (props) => {
   const { data } = props;
+  const [view, setView] = useState(false);
+  const [activeView, setActiveView] = useState(false);
+  const [classicView, setClassicView] = useState(true);
+  const [cardView, setCardView] = useState(false);
+
+  const setViewHandler = () => {
+    setView(!view);
+  };
+
+  const classicViewLayout = () => {};
+
+  const cardViewLayout = () => {
+    setClassicView(false);
+    setCardView(true);
+  };
+
+  useEffect(() => {});
 
   return (
     <main>
@@ -21,76 +42,38 @@ const MainContent = (props) => {
           <button>Create a post</button>
         </div>
         <div>
-          <div className="main-header-icons">
-            <FontAwesomeIcon icon={faChartBar} />
-            <FontAwesomeIcon id="main-header-icon-two" icon={faAngleDown} />
+          <div className="main-header-icons" onClick={setViewHandler}>
+            <div className="tooltip">
+              <FontAwesomeIcon icon={faChartBar} />
+              {view ? (
+                <span className="list-view">
+                  <p>View</p>
+                  <p className="card-view">
+                    {" "}
+                    <FontAwesomeIcon icon={faRug} className="view-icon" />
+                    Card
+                  </p>
+                  <p
+                    className={
+                      classicView ? "classic-view-true" : "classic-view"
+                    }
+                  >
+                    {" "}
+                    <FontAwesomeIcon className="view-icon" icon={faList} />
+                    Classic
+                  </p>
+                </span>
+              ) : (
+                <span class="tooltiptext">Change post view</span>
+              )}
+              <FontAwesomeIcon id="main-header-icon-two" icon={faAngleDown} />
+            </div>
           </div>
         </div>
       </div>
       <div className="main-cards">
-        {data.map((cards) => {
-          return (
-            <div className="card">
-              <div className="card-header">
-                <div className="card-header-left">
-                  <img className="sub-avatar" src={`${cards.sub_avatar}`} />
-                  <p className="sub-name">rz/{cards.sub}</p>
-                  <FontAwesomeIcon className="date-circle" icon={faCircle} />
-                  <span className="card-date"> {cards.post_date}</span>
-                  <FontAwesomeIcon className="date-circle" icon={faCircle} />
-                </div>
-                <div className="card-header-right">
-                  <button>Join</button>
-                  <div className="circle-div">
-                    <FontAwesomeIcon className="circle" icon={faCircle} />
-                    <FontAwesomeIcon className="circle" icon={faCircle} />
-                    <FontAwesomeIcon className="circle" icon={faCircle} />
-                  </div>
-                </div>
-              </div>
-              <div className="card-content">
-                <div className="card-left">
-                  <div className="card-left-text">
-                    <p>{cards.post_title}</p>
-                  </div>
-                  <div className="card-left-btns">
-                    <div>
-                      {" "}
-                      <FontAwesomeIcon
-                        className="card-btn-icon"
-                        id="upvote"
-                        icon={faUpLong}
-                      />
-                      <p>{cards.upvotes}</p>
-                      <FontAwesomeIcon
-                        className="card-btn-icon"
-                        id="downvote"
-                        icon={faDownLong}
-                      />
-                    </div>
-                    <div>
-                      <FontAwesomeIcon
-                        className="card-btn-icon"
-                        icon={faMessage}
-                      />
-                      <p>{cards.comments}</p>
-                    </div>
-                    <div>
-                      <FontAwesomeIcon
-                        className="card-btn-icon"
-                        icon={faArrowUpFromBracket}
-                      />
-                      <p>Share</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="card-right-img">
-                  <img src={`${cards.images}`} alt="cat image" />
-                </div>
-              </div>
-            </div>
-          );
-        })}
+        {classicView ? <ClassicView data={data} /> : null}
+        {cardView ? <CardView data={data} /> : null}
       </div>
     </main>
   );
