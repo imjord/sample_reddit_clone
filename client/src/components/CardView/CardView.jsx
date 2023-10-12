@@ -17,11 +17,11 @@ const CardView = ({ data }) => {
     <div>
       {data.map((cards) => {
         return (
-          <div className="card-view" key={cards.sub}>
+          <div className="card-view" key={cards.user_id}>
             <div className="card-view-header">
               <div className="card-view-header-left">
                 <img className="sub-avatar" src={`${cards.sub_avatar}`} />
-                <p className="sub-name">rz/{cards.sub}</p>
+                <p className="sub-name">rz/{cards.subreddit}</p>
                 <FontAwesomeIcon className="date-circle" icon={faCircle} />
                 <span className="card-view-date"> {cards.post_date}</span>
                 <FontAwesomeIcon className="date-circle" icon={faCircle} />
@@ -41,7 +41,7 @@ const CardView = ({ data }) => {
                   <p>{cards.post_title}</p>
                 </div>
                 <div className="card-view-right-img">
-                  <img src={`${cards.images}`} alt="cat image" />
+                  <img src={`${cards.image}`} alt="cat image" />
                 </div>
                 <div className="card-view-left-btns">
                   <div>

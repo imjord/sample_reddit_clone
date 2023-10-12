@@ -10,14 +10,14 @@ const Popular = (props) => {
         </div>
         {data.map((data) => {
           return (
-            <div className="popular-list" key={data.sub}>
+            <div className="popular-list" key={data.user_id}>
               <ul>
                 <li>
                   <div>
                     <img src={`${data.sub_avatar}`} />
                   </div>
                   <div>
-                    <p>r/{data.sub}</p>
+                    <p>r/{data.subreddit}</p>
                     <p>43,322,974 members</p>
                   </div>
                 </li>

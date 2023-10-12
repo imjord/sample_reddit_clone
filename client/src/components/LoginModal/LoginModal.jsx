@@ -4,36 +4,43 @@ import {
   faEllipsis,
   faRobot,
   faMagnifyingGlass,
+  faStea,
 } from "@fortawesome/free-solid-svg-icons";
 import "./LoginModal.css";
-import React from "react";
+import React, { useState } from "react";
+import appleIcon from "../../assets/images/apple.svg";
 
+import googleIcon from "../../assets/images/google.svg";
+import Register from "../Register/Register";
+import Login from "../Login/Login";
 const LoginModal = (props) => {
   const { toggleLoginModal } = props;
-  const handleModalClick = (e) => {
-    e.stopPropagation(); // Prevent the click event from propagating to the parent div
+
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [register, setRegister] = useState(false);
+
+  const handleRegister = () => {
+    setRegister(true);
+  };
+
+  const handleLogin = () => {
+    setRegister(false);
   };
 
   return (
     <div className="modal-blur" onClick={toggleLoginModal}>
-      <div className="login-modal" onClick={handleModalClick}>
-        <div className="modal-x">
-          {" "}
-          <p onClick={toggleLoginModal}>X</p>
-        </div>
-        <div className="modal-header">
-          <h4>Log in</h4>
-          <p>By contintuntei </p>
-        </div>
-
-        <div></div>
-
-        <div></div>
-
-        <div></div>
-
-        <div></div>
-      </div>
+      {register ? (
+        <Register
+          toggleLoginModal={toggleLoginModal}
+          handleLogin={handleLogin}
+        />
+      ) : (
+        <Login
+          toggleLoginModal={toggleLoginModal}
+          handleRegister={handleRegister}
+        />
+      )}
     </div>
   );
 };

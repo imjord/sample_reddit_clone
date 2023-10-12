@@ -17,11 +17,11 @@ const ClassicView = (props) => {
     <div>
       {data.map((cards) => {
         return (
-          <div className="card" key={cards.sub}>
+          <div className="card" key={cards.user_id}>
             <div className="card-header">
               <div className="card-header-left">
                 <img className="sub-avatar" src={`${cards.sub_avatar}`} />
-                <p className="sub-name">rz/{cards.sub}</p>
+                <p className="sub-name">rz/{cards.subreddit}</p>
                 <FontAwesomeIcon className="date-circle" icon={faCircle} />
                 <span className="card-date"> {cards.post_date}</span>
                 <FontAwesomeIcon className="date-circle" icon={faCircle} />
@@ -72,7 +72,7 @@ const ClassicView = (props) => {
                 </div>
               </div>
               <div className="card-right-img">
-                <img src={`${cards.images}`} alt="cat image" />
+                <img src={`${cards.image}`} alt="cat image" />
               </div>
             </div>
           </div>
