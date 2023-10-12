@@ -8,7 +8,8 @@ import {
   faMagnifyingGlass,
 } from "@fortawesome/free-solid-svg-icons";
 
-const Navbar = () => {
+const Navbar = (props) => {
+  const { toggleLoginModal } = props;
   const [searchIcon, setSearchIcon] = useState(false);
 
   const handleFocus = () => {
@@ -44,7 +45,7 @@ const Navbar = () => {
             <FontAwesomeIcon id="getap" icon={faQrcode} />
             <button>Get app</button>
           </div>
-          <div>
+          <div onClick={toggleLoginModal}>
             <button>Log In</button>
           </div>
           <div>

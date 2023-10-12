@@ -17,7 +17,7 @@ const CardView = ({ data }) => {
     <div>
       {data.map((cards) => {
         return (
-          <div className="card-view">
+          <div className="card-view" key={cards.sub}>
             <div className="card-view-header">
               <div className="card-view-header-left">
                 <img className="sub-avatar" src={`${cards.sub_avatar}`} />

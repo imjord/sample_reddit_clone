@@ -71,7 +71,7 @@ const MainContent = (props) => {
                   </p>
                 </span>
               ) : (
-                <span class="tooltiptext">Change post view</span>
+                <span className="tooltiptext">Change post view</span>
               )}
               <FontAwesomeIcon id="main-header-icon-two" icon={faAngleDown} />
             </div>

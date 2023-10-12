@@ -71,6 +71,11 @@ nav {
   padding: 5px 10px;
   background-color: #1a282d;
 }
+
+.nav-buttons div:nth-child(1):hover {
+  cursor: pointer;
+  filter: brightness(1.3);
+}
 .nav-buttons div:nth-child(1) button {
   outline: none;
   border: none;
@@ -90,6 +95,11 @@ nav {
   border-radius: 20px;
   padding: 10px;
   background-color: #d93a00;
+}
+
+.nav-buttons div:nth-child(2):hover {
+  cursor: pointer;
+  filter: brightness(1.3);
 }
 .nav-buttons div:nth-child(2) button {
   font-size: 14px;

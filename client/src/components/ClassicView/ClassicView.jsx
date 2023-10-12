@@ -17,7 +17,7 @@ const ClassicView = (props) => {
     <div>
       {data.map((cards) => {
         return (
-          <div className="card">
+          <div className="card" key={cards.sub}>
             <div className="card-header">
               <div className="card-header-left">
                 <img className="sub-avatar" src={`${cards.sub_avatar}`} />

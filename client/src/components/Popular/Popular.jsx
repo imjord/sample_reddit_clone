@@ -10,7 +10,7 @@ const Popular = (props) => {
         </div>
         {data.map((data) => {
           return (
-            <div className="popular-list">
+            <div className="popular-list" key={data.sub}>
               <ul>
                 <li>
                   <div>
