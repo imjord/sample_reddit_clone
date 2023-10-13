@@ -19,6 +19,7 @@ import {
   faAngleDown,
   faAngleUp,
 } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 const Side = () => {
   const [topics, setTopics] = useState(false);
   const [resources, setResources] = useState(false);
@@ -33,10 +34,13 @@ const Side = () => {
   return (
     <div className="side-bar">
       <div className="side-home">
-        <div className="active-home">
-          <FontAwesomeIcon icon={faHome} />
-          <h4>Home</h4>
-        </div>
+        <Link className="link-side" to={"/"}>
+          <div className="active-home">
+            {" "}
+            <FontAwesomeIcon icon={faHome} />
+            <h4>Home</h4>
+          </div>
+        </Link>
         <div>
           <FontAwesomeIcon icon={faArrowUpWideShort} />
           <h4>Popular</h4>

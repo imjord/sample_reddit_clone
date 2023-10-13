@@ -14,11 +14,17 @@ const Home = (props) => {
     setPostView(true);
   };
 
+  useEffect(() => {
+    setPostView(false);
+  }, []);
+
   return (
     <div className="home">
       <Side />
 
-      {postView ? null : (
+      {postView ? (
+        <h3>Post still true </h3>
+      ) : (
         <MainContent data={data} toggleLoginModal={toggleLoginModal} />
       )}
 

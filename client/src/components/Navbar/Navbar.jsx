@@ -7,6 +7,7 @@ import {
   faRobot,
   faMagnifyingGlass,
 } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const Navbar = (props) => {
   const { toggleLoginModal } = props;
@@ -25,7 +26,9 @@ const Navbar = (props) => {
       <div className="nav-container">
         <div className="nav-title">
           <FontAwesomeIcon id="robot" icon={faRobot} />
-          <h3>Radditz</h3>
+          <Link className="link" to={"/"}>
+            <h3>Radditz</h3>
+          </Link>
         </div>
         <div className="nav-search">
           {searchIcon ? (

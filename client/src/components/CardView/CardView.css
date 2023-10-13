@@ -21,7 +21,6 @@
 
 .link {
   text-decoration: none;
-  z-index: -500;
 }
 
 .card-view-header-left {
@@ -67,7 +66,6 @@
   padding: 4px 10px;
   font-size: 13px;
   color: white;
-  z-index: 999999;
 }
 
 .circle-div {

@@ -31,7 +31,7 @@ const CardView = ({ data, toggleLoginModal }) => {
                 <div className="card-view-header-right">
                   <button
                     onClick={(event) => {
-                      event.preventDefault(); // Prevent the default link behavior
+                      event.preventDefault();
                       toggleLoginModal();
                     }}
                   >
