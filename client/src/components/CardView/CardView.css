@@ -19,6 +19,11 @@
   margin-bottom: 8px;
 }
 
+.link {
+  text-decoration: none;
+  z-index: -500;
+}
+
 .card-view-header-left {
   display: flex;
   justify-content: flex-start;
@@ -55,13 +60,14 @@
 }
 
 .card-view-header-right button {
-  background-color: blue;
+  background-color: #0045ac;
   outline: none;
   border: none;
   border-radius: 20px;
   padding: 4px 10px;
   font-size: 13px;
   color: white;
+  z-index: 999999;
 }
 
 .circle-div {

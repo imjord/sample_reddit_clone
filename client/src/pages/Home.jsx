@@ -1,15 +1,33 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Side from "../components/Side/Side";
 import "./Home.css";
 import MainContent from "../components/MainContent/MainContent";
 import Popular from "../components/Popular/Popular";
+import Post from "./Post";
+import { Routes, Route, useParams } from "react-router-dom";
 
 const Home = (props) => {
-  const { data } = props;
+  const [postView, setPostView] = useState(false);
+  const { data, toggleLoginModal } = props;
+
+  const postViewHandler = () => {
+    setPostView(true);
+  };
+
   return (
     <div className="home">
       <Side />
-      <MainContent data={data} />
+
+      {postView ? null : (
+        <MainContent data={data} toggleLoginModal={toggleLoginModal} />
+      )}
+
+      <Routes>
+        <Route
+          path="/post/:post_id"
+          element={<Post postViewHandler={postViewHandler} />}
+        />
+      </Routes>
       <Popular data={data} />
     </div>
   );

@@ -16,7 +16,7 @@ import catImage from "../../assets/images/cat.jpg";
 import ClassicView from "../ClassicView/ClassicView";
 import CardView from "../CardView/CardView";
 const MainContent = (props) => {
-  const { data } = props;
+  const { data, toggleLoginModal } = props;
   const [view, setView] = useState(false);
   const [activeView, setActiveView] = useState(false);
   const [classicView, setClassicView] = useState(true);
@@ -79,8 +79,12 @@ const MainContent = (props) => {
         </div>
       </div>
       <div className="main-cards">
-        {classicView ? <ClassicView data={data} /> : null}
-        {cardView ? <CardView data={data} /> : null}
+        {classicView ? (
+          <ClassicView data={data} toggleLoginModal={toggleLoginModal} />
+        ) : null}
+        {cardView ? (
+          <CardView data={data} toggleLoginModal={toggleLoginModal} />
+        ) : null}
       </div>
     </main>
   );

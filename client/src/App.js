@@ -2,6 +2,7 @@ import "./App.css";
 import React, { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
+import Post from "./pages/Post";
 import Navbar from "./components/Navbar/Navbar";
 import mockData from "./MOCK_DATA.json";
 import LoginModal from "./components/LoginModal/LoginModal";
@@ -23,7 +24,10 @@ function App() {
       <Navbar toggleLoginModal={toggleLoginModal} />
       {loginModal && <LoginModal toggleLoginModal={toggleLoginModal} />}
       <Routes>
-        <Route path="/" element={<Home data={data} />} />
+        <Route
+          path="*"
+          element={<Home data={data} toggleLoginModal={toggleLoginModal} />}
+        />
       </Routes>
     </div>
   );
