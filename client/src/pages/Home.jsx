@@ -4,34 +4,46 @@ import "./Home.css";
 import MainContent from "../components/MainContent/MainContent";
 import Popular from "../components/Popular/Popular";
 import Post from "./Post";
-import { Routes, Route, useParams } from "react-router-dom";
+import {
+  Routes,
+  Route,
+  useParams,
+  useNavigate,
+  useLocation,
+} from "react-router-dom";
 
 const Home = (props) => {
   const [postView, setPostView] = useState(false);
   const { data, toggleLoginModal } = props;
+  const location = useLocation();
 
   const postViewHandler = () => {
     setPostView(true);
   };
 
   useEffect(() => {
-    setPostView(false);
-  }, []);
+    if (location.pathname === "/") {
+      setPostView(false);
+    }
+  }, [location]);
 
   return (
     <div className="home">
       <Side />
 
-      {postView ? (
-        <h3>Post still true </h3>
-      ) : (
+      {postView ? null : (
         <MainContent data={data} toggleLoginModal={toggleLoginModal} />
       )}
 
       <Routes>
         <Route
           path="/post/:post_id"
-          element={<Post postViewHandler={postViewHandler} />}
+          element={
+            <Post
+              postViewHandler={postViewHandler}
+              toggleLoginModal={toggleLoginModal}
+            />
+          }
         />
       </Routes>
       <Popular data={data} />
