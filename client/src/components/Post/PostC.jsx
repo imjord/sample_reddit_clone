@@ -14,7 +14,7 @@ import {
   faList,
   faRug,
 } from "@fortawesome/free-solid-svg-icons";
-
+import Comments from "../Comments/Comments";
 const PostC = ({ toggleLoginModal }) => {
   const [data, setData] = useState(mockData);
   const [singleData, setSingleData] = useState({});
@@ -28,7 +28,7 @@ const PostC = ({ toggleLoginModal }) => {
     setSingleData(data[single - 1]);
   }, []);
   return (
-    <div>
+    <div className="post">
       <div className="card-view" key={singleData?.user_id}>
         <div className="card-view-header">
           <div className="card-view-header-left">
@@ -95,6 +95,7 @@ const PostC = ({ toggleLoginModal }) => {
           </div>
         </div>
       </div>
+      <Comments />
     </div>
   );
 };
