@@ -27,7 +27,7 @@ const Comments = () => {
       <div className="comment-content">
       <p>What part of the app would you want to hand off to bun? Buns kind of a big toolbox</p>
       </div>
-      <div className="card-view-left-btns">
+      <div className="comments-btns">
                     <div>
                       {" "}
                       <FontAwesomeIcon
