@@ -59,30 +59,42 @@ const Side = () => {
           <div className="topic-list">
             <div>
               <ul>
+              <Link className="side-links" to={"/topics/gaming"}>
                 <li>
                   <FontAwesomeIcon className="topic-icon" icon={faGamepad} />
-                  Gaming
+                 Gaming
                 </li>
+                </Link>
+                <Link className="side-links" to={"/topics/sports"}>
                 <li>
                   <FontAwesomeIcon className="topic-icon" icon={faBaseball} />
-                  Sports
+                 Sports
                 </li>
+                </Link>
+                <Link className="side-links" to={"/topics/business"}>
                 <li>
                   <FontAwesomeIcon className="topic-icon" icon={faChartLine} />
-                  Business
+                 Business
                 </li>
+                </Link>
+                <Link className="side-links" to={"/topics/crypto"}>
                 <li>
                   <FontAwesomeIcon className="topic-icon" icon={faCoins} />
-                  Crypto
+                 Crypto
                 </li>
+                </Link>
+                <Link className="side-links" to={"/topics/televison"}>
                 <li>
                   <FontAwesomeIcon className="topic-icon" icon={faTv} />
-                  Television
+                 Televison
                 </li>
+                </Link>
+                <Link className="side-links" to={"/topics/celebrity"}>
                 <li>
                   <FontAwesomeIcon className="topic-icon" icon={faStar} />
-                  Celebrity
+                 Celebrity
                 </li>
+                </Link>
               </ul>
             </div>
           </div>

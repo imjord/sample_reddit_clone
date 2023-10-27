@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import TopicC from '../components/Topic/TopicC';
-const Topic = ({topicViewHandler}) => {
+const Topic = ({topicViewHandler, data, toggleLoginModal}) => {
 
 
     useEffect(() => {
@@ -9,7 +9,7 @@ const Topic = ({topicViewHandler}) => {
 
   return (
     <div className='topic-container'>
-        <TopicC />
+        <TopicC data={data} toggleLoginModal={toggleLoginModal}/>
     </div>
   )
 }

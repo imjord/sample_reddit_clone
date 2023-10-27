@@ -67,7 +67,7 @@ const Home = (props) => {
             />
           }
         />
-      <Route path="/topics/:topic" element={<Topic topicViewHandler={topicViewHandler}/>} />
+      <Route path="/topics/:topic" element={<Topic toggleLoginModal={toggleLoginModal} data={data} topicViewHandler={topicViewHandler}/>} />
 
       </Routes>
     </div>
