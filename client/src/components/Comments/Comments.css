@@ -71,3 +71,24 @@
 #circle {
     font-size: 5px;
 }
+
+
+.card-view-left-btns {
+    width: 100%;
+    height: 55%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .card-view-left-btns div {
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+    padding: 6px 8px;
+    border: none;
+    outline: none;
+    background-color: #1b2f33f9;
+    border-radius: 20px;
+    color: white;
+  }

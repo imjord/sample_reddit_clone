@@ -28,6 +28,7 @@ function App() {
           path="*"
           element={<Home data={data} toggleLoginModal={toggleLoginModal} />}
         />
+
       </Routes>
     </div>
   );

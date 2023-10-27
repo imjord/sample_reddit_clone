@@ -1,4 +1,28 @@
-.home {
-  display: flex;
-  background-color: #0b1416f9;
+.home-container {
+ display: flex;
+ position: relative;
+ justify-content: flex-start;
+ 
+}
+
+.home-side-bar {
+ width: 20%;
+ margin-top: 60px;
+ position: fixed;
+}
+
+.home-main-content {
+  position: relative;
+width: 55%;
+left: 20%;
+margin-top: 60px;
+
+}
+
+.home-popular {
+ width: 25%;
+ left: 75%;
+ margin-top: 60px;
+ position: fixed;
+
 }

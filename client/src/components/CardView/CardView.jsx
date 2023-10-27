@@ -72,7 +72,7 @@ const CardView = ({ data, toggleLoginModal }) => {
                         className="card-view-btn-icon"
                         icon={faMessage}
                       />
-                      <p>{cards.comments}</p>
+                      <p>{cards.comment_count}</p>
                     </div>
                     <div>
                       <FontAwesomeIcon

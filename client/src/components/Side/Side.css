@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 25%;
   height: 98vh;
   border-top: 2px solid rgba(128, 128, 128, 0.1);
   border-right: 2px solid rgba(128, 128, 128, 0.1);

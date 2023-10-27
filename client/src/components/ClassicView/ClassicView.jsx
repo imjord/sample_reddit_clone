@@ -70,7 +70,7 @@ const ClassicView = (props) => {
                         className="card-btn-icon"
                         icon={faMessage}
                       />
-                      <p>{cards.comments}</p>
+                      <p>{cards.comment_count}</p>
                     </div>
                     <div>
                       <FontAwesomeIcon

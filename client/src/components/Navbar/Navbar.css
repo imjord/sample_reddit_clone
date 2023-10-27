@@ -4,6 +4,8 @@ nav {
   justify-content: space-between;
   background-color: #0b1416f9;
   color: white;
+  position: fixed;
+  z-index: 99999;
 }
 .nav-container {
   width: 100%;
