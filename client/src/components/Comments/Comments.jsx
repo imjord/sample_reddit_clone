@@ -1,19 +1,26 @@
-import React from "react";
+import React, {useState} from "react";
 import "./Comments.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
  faPlus,
  faCircle,
  faAngleDown,
-
+faPerson,
  faUpLong,
  faDownLong,
  faMessage,
  faArrowUpFromBracket,
+ faP,
 } from "@fortawesome/free-solid-svg-icons";
+import hmm from "../../assets/images/hmm.png";
 const Comments = () => {
+  const [comments, setComments] = useState(false);
+
   return <div className="comment-container">
-    <div className="sort-comment">
+
+    {comments ? (
+      <>
+      <div className="sort-comment">
         <p>Sort by: Best <FontAwesomeIcon icon={faAngleDown} /></p>
     </div>
     <div className="add-comment-btn">
@@ -58,6 +65,24 @@ const Comments = () => {
                     </div>
                   </div>
     </div>
+      </>
+      
+    )  : <div className="no-comments">
+      <div className="no-comments-icon">
+        <img src={hmm} alt="hmm" />
+        </div>
+        <div className="no-comments-content">
+          <div>
+            <p>Be the first to comment!</p>
+            </div>
+            <div>
+              <p>Nobodys responded to this post yet.</p>
+              <p>Add your thoughts and get the conversation going.</p>
+              </div>
+          </div>
+      
+      </div>}
+   
   </div>;
 };
 

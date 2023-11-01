@@ -12,6 +12,7 @@ import {
   useLocation,
 } from "react-router-dom";
 import Topic from "./Topic";
+import NotFound from "./NotFound";
 
 const Home = (props) => {
   const [postView, setPostView] = useState(false);
@@ -34,6 +35,13 @@ const Home = (props) => {
     setTopicView(true);
   };
 
+  const handleNotFound = () => {
+    setPostView(false);
+    setMainView(false);
+
+    setTopicView(false);
+  }
+
   useEffect(() => {
     if (location.pathname === "/") {
       setPostView(false);
@@ -41,6 +49,7 @@ const Home = (props) => {
       setMainView(true);
     } 
 
+  
     if(postView){
       setTopicView(false);
     }
@@ -68,7 +77,7 @@ const Home = (props) => {
           }
         />
       <Route path="/topics/:topic" element={<Topic toggleLoginModal={toggleLoginModal} data={data} topicViewHandler={topicViewHandler}/>} />
-
+          <Route path="*" element={<NotFound handleNotFound={handleNotFound} />} />
       </Routes>
     </div>
     <div className="home-popular">

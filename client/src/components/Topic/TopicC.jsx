@@ -5,8 +5,7 @@ import CardView from '../CardView/CardView'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faChartBar,
-  faAngleDown,
+
   faCircle,
   faUpLong,
   faDownLong,
@@ -66,7 +65,8 @@ const TopicC = (props) => {
             </div>
         </div>
         <div className='topic-cards'>
-        {topic.map((cards) => {
+
+          {topic.length > 0 ? <div> {topic.map((cards) => {
         return (
           <Link className="link" to={`/post/${cards.post_id}`}>
             <div className="topic-view" key={cards.user_id}>
@@ -137,7 +137,8 @@ const TopicC = (props) => {
             </div>
           </Link>
         );
-      })}
+      })} </div> : <p> NO POSTS WITH THIS TOPIC</p>}
+       
         </div>
     </div>
   )

@@ -92,3 +92,46 @@
     border-radius: 20px;
     color: white;
   }
+
+
+  .no-comments { 
+    display: flex;
+
+  }
+
+
+
+  .no-comments-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    font-size: 100px;
+  }
+
+  .no-comments-content { 
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .no-comments-content div:nth-child(1) {
+    margin-bottom: 20px;
+  }
+  .no-comments-content div:nth-child(1) p{
+    font-size: 30px;
+    color: gray;
+  }
+
+  .no-comments-content div:nth-child(2) {
+    
+  }
+
+  .no-comments-content div:nth-child(2) p{
+    color: gray;
+    font-size: 14px;
+    margin-top: 4px;
+    
+  }

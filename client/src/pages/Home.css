@@ -26,3 +26,21 @@ margin-top: 60px;
  position: fixed;
 
 }
+
+
+.not-found 
+{
+  z-index: 99999;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+ 
+
+  font-size: 30px;
+}
+
+.not-found p {
+  margin: 15px;
+}
