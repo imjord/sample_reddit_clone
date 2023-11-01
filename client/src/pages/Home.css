@@ -28,19 +28,26 @@ margin-top: 60px;
 }
 
 
-.not-found 
-{
-  z-index: 99999;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
- 
 
-  font-size: 30px;
+/* mobile  */
+@media screen and (min-width: 801px) {
+ 
 }
 
-.not-found p {
-  margin: 15px;
+
+@media screen and (max-width: 800px) {
+
+  .home-side-bar {
+    width: 0%;
+    
+  }
+
+  .home-popular {
+    width: 0%;
+  }
+  .home-main-content {
+    display: flex;
+    width: 100%;
+    left: 0%;
+  }
 }

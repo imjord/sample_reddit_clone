@@ -175,3 +175,25 @@
   padding: 0 !important;
   margin: 0 !important;
 }
+
+
+
+
+
+
+
+
+
+
+
+/* mobile  */
+@media screen and (min-width: 801px) {
+ 
+}
+
+
+@media screen and (max-width: 800px) {
+  .side-bar {
+    display: none;
+  }
+}

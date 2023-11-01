@@ -320,3 +320,17 @@ main {
   width: 100%;
   border-radius: 10px;
 }
+
+
+
+/* mobile  */
+@media screen and (min-width: 801px) {
+ 
+}
+
+
+@media screen and (max-width: 800px) {
+  .side-bar {
+    display: none;
+  }
+}

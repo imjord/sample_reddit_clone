@@ -6,6 +6,8 @@ import {
   faEllipsis,
   faRobot,
   faMagnifyingGlass,
+  faBars,
+  faB
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
@@ -25,9 +27,12 @@ const Navbar = (props) => {
     <nav>
       <div className="nav-container">
         <div className="nav-title">
+          <div className="bars-mobile">
+            <FontAwesomeIcon icon={faBars} />
+          </div>
           <FontAwesomeIcon id="robot" icon={faRobot} />
           <Link className="link" to={"/"}>
-            <h3>Radditz</h3>
+            <h3 className="nav-h3">Radditz</h3>
           </Link>
         </div>
         <div className="nav-search">

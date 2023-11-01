@@ -59,3 +59,17 @@
   cursor: pointer;
   background-color: rgb(44, 44, 44);
 }
+
+
+
+/* mobile  */
+@media screen and (min-width: 801px) {
+ 
+}
+
+
+@media screen and (max-width: 800px) {
+  .popular {
+    display: none;
+  }
+}
