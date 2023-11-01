@@ -19,7 +19,7 @@ const ClassicView = (props) => {
     <div>
       {data.map((cards) => {
         return (
-          <Link className="link" to={`/post/${cards.post_id}`} >
+          <Link className="link" to={`/post/${cards.post_id}`}>
             <div className="card" key={cards.user_id}>
               <div className="card-header">
                 <div className="card-header-left">

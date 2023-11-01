@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
  faFrown
 } from "@fortawesome/free-solid-svg-icons";
+
 const NotFound = (props) => {
 const {handleNotFound} = props;
 

@@ -18,12 +18,14 @@ const Home = (props) => {
   const [postView, setPostView] = useState(false);
   const [topicView, setTopicView] = useState(false);
   const [mainView, setMainView] = useState(true);
+  const [errorView, setErrorView] = useState(false);
   const { data, toggleLoginModal } = props;
   const location = useLocation();
 
   const postViewHandler = () => {
     setTopicView(false);
     setMainView(false);
+    setErrorView(false)
     setPostView(true);
     
   };
@@ -31,16 +33,10 @@ const Home = (props) => {
   const topicViewHandler = () => {
     setPostView(false);
     setMainView(false);
-
+    setErrorView(false)
     setTopicView(true);
   };
 
-  const handleNotFound = () => {
-    setPostView(false);
-    setMainView(false);
-
-    setTopicView(false);
-  }
 
   useEffect(() => {
     if (location.pathname === "/") {
@@ -49,6 +45,10 @@ const Home = (props) => {
       setMainView(true);
     } 
 
+
+    
+
+    
   
     if(postView){
       setTopicView(false);
@@ -56,6 +56,8 @@ const Home = (props) => {
     if(topicView){
       setPostView(false);
     }
+
+    
   }, [location]);
 
   return (
@@ -77,7 +79,7 @@ const Home = (props) => {
           }
         />
       <Route path="/topics/:topic" element={<Topic toggleLoginModal={toggleLoginModal} data={data} topicViewHandler={topicViewHandler}/>} />
-          <Route path="*" element={<NotFound handleNotFound={handleNotFound} />} />
+         
       </Routes>
     </div>
     <div className="home-popular">
