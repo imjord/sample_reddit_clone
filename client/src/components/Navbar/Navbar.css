@@ -125,14 +125,14 @@ nav {
 
 /* mobile navbar */
 
-@media screen and (min-width: 801px) {
+@media screen and (min-width: 1141px) {
   .bars-mobile {
     display: none;
   }
 }
 
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1140px) {
   .bars-mobile {
     font-size: 25px;
     margin-right: 25px;
