@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/sample_reddit_clone/static/css/main.df107bf0.css",
+    "main.js": "/sample_reddit_clone/static/js/main.6d23efcb.js",
+    "static/media/cat.jpg": "/sample_reddit_clone/static/media/cat.0b9dd2edeed781ae6904.jpg",
+    "index.html": "/sample_reddit_clone/index.html",
+    "static/media/apple.svg": "/sample_reddit_clone/static/media/apple.0978859494ec408d7b24767d30ca93d1.svg",
+    "static/media/google.svg": "/sample_reddit_clone/static/media/google.7ac0128459af56dc3aa645ca939f32c3.svg",
+    "main.df107bf0.css.map": "/sample_reddit_clone/static/css/main.df107bf0.css.map",
+    "main.6d23efcb.js.map": "/sample_reddit_clone/static/js/main.6d23efcb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.df107bf0.css",
+    "static/js/main.6d23efcb.js"
+  ]
+}
